@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Calvary Baptist Church">
+  <rect width="64" height="64" fill="#fbf7f2"/>
+  <ellipse cx="32" cy="32" rx="21" ry="26" fill="none" stroke="#84284d" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M32 13.5V50" fill="none" stroke="#84284d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M20 27.5h24" fill="none" stroke="#84284d" stroke-width="5" stroke-linecap="round"/>
+</svg>

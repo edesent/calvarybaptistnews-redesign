@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Calvary Baptist Church — "Wine & Ivory"
+
+   The palette is taken straight off the church logo: the wine of the script
+   and the brush-drawn oval, plain black for the sans-serif, and a warm ivory
+   for paper. Nothing else is invented. Every component reskins from these
+   values alone, so changing a hex here changes the whole site.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@theme inline {
+  --font-sans: var(--font-source);
+  --font-serif: var(--font-lora);
+
+  /* Wine — sampled from the logo's script and oval (#84284d) */
+  --color-wine: #84284d;
+  --color-wine-deep: #5c1a36;
+  --color-wine-dark: #3c0c24;
+  --color-wine-soft: #a4436a;
+  --color-wine-pale: #f6e9ee;
+
+  /* Paper */
+  --color-ivory: #fbf7f2;
+  --color-ivory-dark: #f2ebe1;
+  --color-paper: #ffffff;
+
+  /* Ink — black, as the logo's wordmark, warmed a hair so it sits on ivory */
+  --color-ink: #17131a;
+  --color-ink-soft: #3d3540;
+  --color-body: #4f4750;
+  --color-muted: #7c737f;
+  --color-faint: #a79ea9;
+
+  /* Hairlines */
+  --color-rule: #e6dcd0;
+  --color-rule-strong: #d3c5b6;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 108px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-body);
+  background-color: var(--color-ivory);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-wine);
+  color: #fff;
+}
+
+/* Lora's caps run tall; a touch of negative tracking tightens display type */
+.font-serif {
+  letter-spacing: -0.011em;
+}
+
+/* ── Eyebrow label: small caps over a short wine rule ────────────────────── */
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--color-wine);
+}
+
+/* ── The oval: the logo's defining shape, reused as a photo frame ─────────
+   Applied to a wrapper around a fill image. The ring is drawn separately so
+   it can sit slightly outside the mask. */
+.oval-mask {
+  border-radius: 50% / 50%;
+  overflow: hidden;
+}
+
+/* ── Hand-drawn feel for section dividers ────────────────────────────────── */
+.rule-wine {
+  height: 2px;
+  width: 3.5rem;
+  background: linear-gradient(
+    90deg,
+    var(--color-wine) 0%,
+    var(--color-wine) 70%,
+    transparent 100%
+  );
+}
+
+/* ── Scroll reveal ───────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Hero entrance ───────────────────────────────────────────────────────── */
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  opacity: 0;
+  animation: riseIn 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ── Long-form article type, used by the doctrinal and history pages ─────── */
+.prose-cbc {
+  color: var(--color-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose-cbc p + p {
+  margin-top: 1.05em;
+}
+
+.prose-cbc strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+/* Scripture references trail each article of faith in smaller wine type */
+.refs {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--color-wine);
+  font-style: italic;
+}
+
+/* ── Focus ring, consistent everywhere ───────────────────────────────────── */
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--color-wine);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
