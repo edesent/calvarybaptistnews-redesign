@@ -143,70 +143,111 @@ export default function HomePage() {
         </Reveal>
       </Section>
 
-      {/* ── What to expect ──────────────────────────────────────────────── */}
-      <Section tone="wine">
+      {/* ── The sanctuary ───────────────────────────────────────────────── */}
+      <Section tone="ivory">
         <Reveal>
           <Heading
             eyebrow="Your First Visit"
-            title="What a Sunday looks like here"
-            onDark
+            title="Come and sit in it"
             lead="Nothing about a service at Calvary is designed to put you on the spot. You can sit near the back, sing if you want to, and leave without anyone asking you for anything."
+            align="center"
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
+        {/* The room itself, given the space it deserves */}
+        <Reveal>
+          <figure className="mt-14">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-sm bg-ivory-dark">
+              <Image
+                src="/img/sanctuary-interior.jpg"
+                alt="The auditorium at Calvary Baptist Church — rows of blue chairs facing a wooden pulpit, a stone cross on the platform wall, arched windows down both sides, and a wood floor"
+                fill
+                sizes="(min-width: 1024px) 1200px, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="mt-4 text-center text-[14px] text-muted">
+              Our auditorium at 610 Myers Lane — there is a seat here for you.
+            </figcaption>
+          </figure>
+        </Reveal>
+
+        <div className="mt-8 grid gap-7 md:grid-cols-2">
           <Reveal>
             <figure>
-              <div className="relative aspect-[16/10] overflow-hidden rounded-sm">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-ivory-dark">
                 <Image
-                  src="/img/congregation-worship.jpg"
-                  alt="The congregation of Calvary Baptist Church standing to sing inside the Tabernacle, with the pastor at the pulpit"
+                  src="/img/new-building-hall.jpg"
+                  alt="The platform in the auditorium — the piano and organ, choir seating, a stone-faced wall, and log benches at the front"
                   fill
-                  sizes="(min-width: 1024px) 620px, 100vw"
+                  sizes="(min-width: 768px) 620px, 100vw"
                   className="object-cover"
                 />
               </div>
-              <figcaption className="mt-3 text-[13.5px] text-wine-pale/70">
-                A Sunday morning inside the Tabernacle.
+              <figcaption className="mt-3 border-l-2 border-wine/40 pl-3 text-[13.5px] leading-snug text-muted">
+                The piano, the organ, and the choir seats.
               </figcaption>
             </figure>
           </Reveal>
-
-          <Reveal delay={120}>
-            <dl className="grid gap-px overflow-hidden rounded-sm bg-wine-pale/25 sm:grid-cols-2">
-              {[
-                {
-                  t: "The old hymns",
-                  d: "Congregational singing from the hymnal, with piano and organ. Traditional, and loud enough that no one can hear you.",
-                },
-                {
-                  t: "The King James Bible",
-                  d: "Expository preaching, verse by verse. Bring a Bible or borrow one from the pew rack.",
-                },
-                {
-                  t: "Room for your children",
-                  d: "Children's Church at 11:00, a staffed nursery for ages three and under, and no one minding a fussy baby.",
-                },
-                {
-                  t: "About an hour",
-                  d: "Morning worship runs a little over an hour. Sunday School is the hour before, with a class for every age.",
-                },
-              ].map((f) => (
-                <div key={f.t} className="bg-wine p-7">
-                  <dt className="font-serif text-[20px] text-white">{f.t}</dt>
-                  <dd className="mt-2.5 text-[14.5px] leading-relaxed text-wine-pale/85">
-                    {f.d}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-            <div className="mt-9">
-              <Button href="/visit" variant="light">
-                Plan Your Visit
-              </Button>
-            </div>
+          <Reveal delay={90}>
+            <figure>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-ivory-dark">
+                <Image
+                  src="/img/congregation-worship.jpg"
+                  alt="The congregation of Calvary Baptist Church standing to sing during a Sunday morning service"
+                  fill
+                  sizes="(min-width: 768px) 620px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 border-l-2 border-wine/40 pl-3 text-[13.5px] leading-snug text-muted">
+                Congregational singing, from the hymnal.
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
+
+        {/* What actually happens in that hour */}
+        <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              t: "The old hymns",
+              d: "Congregational singing from the hymnal, with piano and organ. Traditional, and loud enough that no one can hear you.",
+            },
+            {
+              t: "The King James Bible",
+              d: "Expository preaching, verse by verse. Bring a Bible or borrow one from the rack.",
+            },
+            {
+              t: "Room for your children",
+              d: "Children's Church at 11:00, a staffed nursery for ages three and under, and no one minding a fussy baby.",
+            },
+            {
+              t: "About an hour",
+              d: "Morning worship runs a little over an hour. Sunday School is the hour before, with a class for every age.",
+            },
+          ].map((f, i) => (
+            <Reveal key={f.t} delay={i * 60}>
+              <div className="h-full bg-paper p-7">
+                <p className="font-serif text-[20px] leading-snug text-ink">
+                  {f.t}
+                </p>
+                <p className="mt-2.5 text-[14.5px] leading-relaxed text-body">
+                  {f.d}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <Button href="/visit">Plan Your Visit</Button>
+            <Button href="/sermons" variant="outline">
+              Watch a Sermon
+            </Button>
+          </div>
+        </Reveal>
       </Section>
 
       {/* ── New building project ────────────────────────────────────────── */}

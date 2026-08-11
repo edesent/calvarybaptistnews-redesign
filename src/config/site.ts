@@ -40,6 +40,13 @@ export const SITE = {
     "https://www.youtube.com/channel/UCI_B3V_W-tHU2p7LJgCcTXQ/featured",
   /** Drives the auto-updating sermon list on /sermons. */
   youtubeChannelId: "UCI_B3V_W-tHU2p7LJgCcTXQ",
+  /**
+   * A channel's "uploads" playlist is its id with UC swapped for UU. Embedding
+   * that playlist always plays the newest sermon first, with no API key and no
+   * dependence on the RSS feed (which YouTube rate-limits with a 404). This is
+   * what keeps the player on /sermons working even when the feed is unavailable.
+   */
+  youtubeUploadsPlaylist: "UUI_B3V_W-tHU2p7LJgCcTXQ",
   anchorsPdf: "https://www.wholesomewords.org/pdf/anchors.pdf",
   discipleshipPdf:
     "https://irp.cdn-website.com/f4ca3a22/files/uploaded/Discipleship_101_Master._Revised_July_2025.pdf",
