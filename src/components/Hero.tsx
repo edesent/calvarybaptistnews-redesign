@@ -100,7 +100,10 @@ export default function Hero() {
             muted
             loop
             playsInline
-            preload="metadata"
+            // `preload="metadata"` defers the download far enough that the
+            // autoplay attempt finds no data and the video just sits on its
+            // poster. It has to be "auto" to actually start on its own.
+            preload="auto"
             poster="/img/new-building-hero.jpg"
             aria-label="A walkthrough of Calvary Baptist Church at 610 Myers Lane — the new church building, the grounds, and a Sunday service"
             className="absolute inset-0 h-full w-full object-cover"
