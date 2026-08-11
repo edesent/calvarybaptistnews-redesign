@@ -40,24 +40,22 @@ function stripHtml(value: string) {
  * page revalidates every half hour, so it heals itself.
  */
 async function fetchFeed(feedUrl: string): Promise<string | null> {
-  for (let attempt = 0; attempt < 2; attempt++) {
-    if (attempt > 0) {
-      await new Promise((resolve) => setTimeout(resolve, 400));
-    }
-    try {
-      const response = await fetch(feedUrl, {
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36",
-          Accept: "application/atom+xml, application/xml, text/xml, */*",
-        },
-        next: { revalidate: 1800 },
-      });
-      if (response.ok) return await response.text();
-      console.warn(`YouTube feed responded ${response.status}`);
-    } catch (error) {
-      console.warn("YouTube feed request failed:", error);
-    }
+  try {
+    const response = await fetch(feedUrl, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36",
+        Accept: "application/atom+xml, application/xml, text/xml, */*",
+      },
+      // Must stay cacheable — `no-store` or `revalidate: 0` here would force
+      // /sermons to render dynamically and break static generation. A failure
+      // is retried on the page's next revalidation, half an hour later.
+      next: { revalidate: 1800 },
+    });
+    if (response.ok) return await response.text();
+    console.warn(`YouTube feed responded ${response.status}`);
+  } catch (error) {
+    console.warn("YouTube feed request failed:", error);
   }
   return null;
 }
