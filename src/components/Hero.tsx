@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SITE } from "@/config/site";
 import { Button } from "@/components/ui";
+import HeroVideo from "@/components/HeroVideo";
 
 /**
  * Text-forward hero. The tagline is the church's own — set large in Lora, with
@@ -95,21 +96,11 @@ export default function Hero() {
           in a wine bar beneath, never over the footage. */}
       <div className="bg-ivory">
         <div className="relative aspect-[16/11] w-full overflow-hidden bg-ink sm:aspect-[2/1] lg:aspect-[16/7]">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            // `preload="metadata"` defers the download far enough that the
-            // autoplay attempt finds no data and the video just sits on its
-            // poster. It has to be "auto" to actually start on its own.
-            preload="auto"
+          <HeroVideo
+            src="/hero-tour.mp4"
             poster="/img/new-building-hero.jpg"
-            aria-label="A walkthrough of Calvary Baptist Church at 610 Myers Lane — the new church building, the grounds, and a Sunday service"
-            className="absolute inset-0 h-full w-full object-cover"
-          >
-            <source src="/hero-tour.mp4" type="video/mp4" />
-          </video>
+            label="A walkthrough of Calvary Baptist Church at 610 Myers Lane — the new church building, the grounds, and a Sunday service"
+          />
         </div>
         <div className="bg-wine-dark">
           <div className="mx-auto flex max-w-7xl flex-wrap items-baseline justify-between gap-x-6 gap-y-1.5 px-5 py-3.5 lg:px-8">
