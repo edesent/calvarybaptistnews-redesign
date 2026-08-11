@@ -22,8 +22,8 @@ export const MINISTRY_DETAILS: MinistryDetail[] = [
     lead: "There is somewhere for your children to be at every service, and someone glad to have them there.",
     photo: {
       src: "/img/sanctuary-interior.jpg",
-      alt: "Inside the Tabernacle, where Children's Church meets during the morning service",
-      caption: "Children's Church meets during the 11:00 hour.",
+      alt: "Inside the auditorium, where the morning service meets",
+      caption: "Children's Church meets during the 11:00 hour."
     },
     meetings: [
       {

@@ -166,7 +166,7 @@ export default function NewBuildingPage() {
           <Heading
             eyebrow="How it went up"
             title="The work, step by step"
-            lead="Photographs from the renovation that turned an open-air pavilion into the building we meet in now."
+            lead="The finished church house and auditorium, and behind them the renovation that turned an open-air pavilion into the Tabernacle."
             align="center"
           />
         </Reveal>
@@ -179,8 +179,8 @@ export default function NewBuildingPage() {
             },
             {
               src: "/img/new-building-hall.jpg",
-              alt: "A finished room inside the new building, with round tables, chairs, arched windows and a small platform",
-              caption: "Inside: room to gather, and to teach.",
+              alt: "The platform in the new auditorium — piano and organ, choir seating, a stone-faced wall, and log benches",
+              caption: "The platform, the piano, and the choir seats.",
             },
             {
               src: "/img/new-building-classroom.jpg",

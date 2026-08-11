@@ -4,24 +4,36 @@ import { Button } from "@/components/ui";
 import HeroVideo from "@/components/HeroVideo";
 
 /**
- * Text-forward hero. The tagline is the church's own — set large in Lora, with
- * "Crucified, Risen, and Coming Again" carrying the wine. Beneath it, the
- * Tabernacle photo runs full width at its true 1728×741 proportion so the
- * building is never awkwardly cropped.
+ * Text-forward hero over the new auditorium.
+ *
+ * The tagline is the church's own — set large in Lora, with "Crucified, Risen,
+ * and Coming Again" carrying the wine. The sanctuary photograph sits behind it
+ * under an ivory scrim: heavy on the left where the type sits, thinning to the
+ * right so the room reads. That keeps ink-on-paper contrast (and the light feel
+ * of the church's own brand) rather than turning the page dark.
  */
 export default function Hero() {
   return (
     <>
       <section className="relative overflow-hidden bg-ivory">
-        {/* Oversized oval mark, barely there, anchoring the right side */}
         <Image
-          src="/mark.png"
+          src="/img/sanctuary-wide.jpg"
           alt=""
-          width={170}
-          height={232}
-          aria-hidden="true"
+          fill
           priority
-          className="pointer-events-none absolute right-[-4%] top-1/2 h-[125%] w-auto -translate-y-1/2 opacity-[0.03] sm:opacity-[0.05] lg:right-[6%] lg:h-[135%]"
+          sizes="100vw"
+          aria-hidden="true"
+          className="object-cover object-[center_38%]"
+        />
+        {/* Two scrims: a flat one that guarantees legibility on narrow screens,
+            and a left-weighted gradient that opens the photo up on wide ones. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-ivory/[0.88] lg:bg-transparent"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 hidden lg:block lg:bg-gradient-to-r lg:from-ivory lg:from-12% lg:via-ivory/88 lg:via-52% lg:to-ivory/40"
         />
 
         <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-16 lg:px-8 lg:pb-24 lg:pt-24">

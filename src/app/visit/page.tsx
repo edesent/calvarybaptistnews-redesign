@@ -17,7 +17,7 @@ const QUESTIONS = [
   },
   {
     q: "Where do I park, and which door?",
-    a: "Pull up the gravel drive at 610 Myers Lane; there is plenty of room. The double doors under the covered porch are the ones you want.",
+    a: "Turn in at our sign on Myers Lane and follow the drive; there is plenty of parking. Head for the doors under the covered entrance, and someone will point you the rest of the way.",
   },
   {
     q: "Where do my children go?",
@@ -126,9 +126,9 @@ export default function VisitPage() {
           <Reveal delay={70}>
             <Figure
               src="/img/sanctuary-interior.jpg"
-              alt="Inside the Tabernacle — rows of blue chairs facing a wooden pulpit on a low platform, with pine walls and windows down both sides"
+              alt="Inside the auditorium — rows of blue chairs facing a wooden pulpit, with a stone cross on the platform wall and arched windows down both sides"
               ratio="aspect-[4/3]"
-              caption="Blue chairs, a wooden pulpit, plenty of light."
+              caption="Blue chairs, a wooden pulpit, and plenty of light."
             />
           </Reveal>
           <Reveal delay={140}>
