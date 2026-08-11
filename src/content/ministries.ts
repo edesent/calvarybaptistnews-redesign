@@ -135,10 +135,15 @@ export const MINISTRY_DETAILS: MinistryDetail[] = [
     },
     meetings: [
       { name: "Congregational singing", when: "Every service" },
-      { name: "Special music", when: "Sunday mornings and evenings" },
+      { name: "Choir practice", when: "Sundays, 5:15 pm" },
+      {
+        name: "The Calvary Choir",
+        when: "Sunday evenings",
+        who: "Singing in the Bible Hour",
+      },
     ],
     body: [
-      "Mike Stanley leads the congregational singing, and Jennifer Stanley serves as pianist and organist. Both are graduates of Bob Jones University. Rachel Waters also provides piano music for our singing and special groups, assisted by Mrs. Holly Whitley.",
+      "Mike Stanley leads the congregational singing, and Jennifer Stanley serves as pianist and organist. Both are graduates of Bob Jones University. Rachel Waters also provides piano music for our singing and special groups, assisted by Mrs. Holly Whitley. The Calvary Choir practises at 5:15 on Sunday afternoons and sings in the evening Bible Hour.",
       "Our music ministry emphasizes genuine, heartfelt worship using traditional hymns and choruses. Our church worship style is traditional — the old hymns and choruses that many people grew up with. These hymns provide a theological depth to our worship: songs that the generation before us sang, songs that we will know and sing into our old age.",
       "If you play or sing and would like to serve, speak to Mike or to the pastor.",
     ],

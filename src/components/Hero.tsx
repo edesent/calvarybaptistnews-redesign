@@ -88,24 +88,30 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* The Tabernacle. The photo runs at its native 1728×741 on wide screens;
-          on a phone that would be a 170px-tall sliver, so it crops taller. The
-          caption sits in a wine bar beneath rather than over bright grass. */}
+      {/* The church's own walkthrough of 610 Myers Lane, running full width.
+          Muted + autoplay + loop so it behaves like moving scenery rather than
+          media the visitor has to manage; the poster frame carries the weight
+          on slow connections and wherever autoplay is refused. The caption sits
+          in a wine bar beneath, never over the footage. */}
       <div className="bg-ivory">
-        <div className="relative aspect-[16/11] w-full sm:aspect-[2/1] lg:aspect-[1728/741]">
-          <Image
-            src="/img/tabernacle.jpg"
-            alt="The Tabernacle at Calvary Baptist Church — a long board-and-batten building with a standing-seam roof, set against the tree line at 610 Myers Lane"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+        <div className="relative aspect-[16/11] w-full overflow-hidden bg-ink sm:aspect-[2/1] lg:aspect-[16/7]">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/img/new-building-hero.jpg"
+            aria-label="A walkthrough of Calvary Baptist Church at 610 Myers Lane — the new church building, the grounds, and a Sunday service"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/hero-tour.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className="bg-wine-dark">
           <div className="mx-auto flex max-w-7xl flex-wrap items-baseline justify-between gap-x-6 gap-y-1.5 px-5 py-3.5 lg:px-8">
             <p className="font-serif text-[clamp(1.05rem,2vw,1.4rem)] text-white">
-              The Tabernacle
+              Come and visit with us
               <span className="ml-3 font-sans text-[13px] font-normal tracking-wide text-wine-pale/75">
                 {SITE.address.full}
               </span>

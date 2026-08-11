@@ -52,10 +52,10 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     images: [
       {
-        url: "/img/tabernacle.jpg",
-        width: 1728,
-        height: 741,
-        alt: "The Tabernacle at Calvary Baptist Church, 610 Myers Lane",
+        url: "/img/new-building-front.jpg",
+        width: 1800,
+        height: 1012,
+        alt: "Calvary Baptist Church's new building at 610 Myers Lane, McMinnville",
       },
     ],
   },
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.city}, Tennessee`,
     description: SITE.description,
-    images: ["/img/tabernacle.jpg"],
+    images: ["/img/new-building-front.jpg"],
   },
   robots: {
     index: true,
@@ -105,7 +105,7 @@ function StructuredData() {
     foundingDate: String(SITE.founded),
     slogan: SITE.tagline,
     logo: `${SITE.url}/logo.png`,
-    image: `${SITE.url}/img/tabernacle.jpg`,
+    image: `${SITE.url}/img/new-building-front.jpg`,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,

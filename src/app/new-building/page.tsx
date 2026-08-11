@@ -4,9 +4,9 @@ import { Button, Figure, Heading, PageHero, Section } from "@/components/ui";
 import { SITE } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "New Building Project",
+  title: "Our New Building",
   description:
-    "Praying and planning for a new church building on our nineteen acres at 610 Myers Lane, McMinnville, Tennessee. Watch the walkthrough and see how the work has progressed.",
+    "Nine years of building on nineteen acres at 610 Myers Lane, McMinnville — a workshop, a pavilion enclosed as the Tabernacle, and now a finished church house. Take the walkthrough.",
   alternates: { canonical: "/new-building" },
 };
 
@@ -47,12 +47,12 @@ export default function NewBuildingPage() {
   return (
     <>
       <PageHero
-        eyebrow="Praying & Planning"
+        eyebrow="Nineteen acres, nine years"
         title="Our New Church Building"
-        lead="Nineteen acres off Highway 55, a workshop, a pavilion enclosed as the Tabernacle — and now ground broken for a church house. Here is where the work stands."
+        lead="A workshop, then a pavilion, then the pavilion walled in as the Tabernacle — and now a finished church house on the same field off Highway 55. Here is how it went up."
       />
 
-      {/* Walkthrough video */}
+      {/* Walkthrough videos: the finished building, and the original plan */}
       <Section tone="paper">
         <Reveal>
           <div className="mx-auto max-w-4xl">
@@ -60,16 +60,37 @@ export default function NewBuildingPage() {
               <video
                 controls
                 preload="metadata"
+                poster="/img/new-building-hero.jpg"
+                className="aspect-video w-full"
+              >
+                <source src="/hero-tour.mp4" type="video/mp4" />
+                Your browser cannot play this video. It is also on our Facebook
+                page.
+              </video>
+            </div>
+            <p className="mt-4 text-center text-[14px] text-muted">
+              A walk around 610 Myers Lane — the new building, the grounds, and a
+              Sunday service.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <div className="mx-auto mt-14 max-w-3xl">
+            <div className="overflow-hidden rounded-sm border border-rule bg-ink">
+              <video
+                controls
+                preload="none"
                 poster="/img/new-church-building.jpg"
                 className="aspect-video w-full"
               >
                 <source src="/new-building-tour.mp4" type="video/mp4" />
-                Your browser cannot play this video. The walkthrough is also on
-                our Facebook page.
+                Your browser cannot play this video.
               </video>
             </div>
             <p className="mt-4 text-center text-[14px] text-muted">
-              A walkthrough of the building we are praying and planning for.
+              The original plan, as we prayed over it — worth comparing with what
+              God actually gave us.
             </p>
           </div>
         </Reveal>
@@ -80,9 +101,9 @@ export default function NewBuildingPage() {
         <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
           <Reveal>
             <Heading
-              eyebrow="The plan"
-              title="What we are building, and why"
-              lead="Calvary outgrew the old building on West End Avenue. In 2017 God provided nineteen acres of wooded pasture adjacent to Highway 55, and we have been building on it ever since — a piece at a time, largely with our own hands."
+              eyebrow="What we built"
+              title="A piece at a time, with our own hands"
+              lead="Calvary outgrew the old building on West End Avenue. In 2017 God provided nineteen acres of wooded pasture adjacent to Highway 55, and we have been building on it ever since."
             />
             <div className="prose-cbc mt-7">
               <p>
@@ -92,28 +113,26 @@ export default function NewBuildingPage() {
                 season. The church grew by fifty percent in those years.
               </p>
               <p>
-                The next step is a church building on the same field: a
-                sanctuary with a steeple, a covered drop-off for the folks who
-                need it, and classrooms for a Sunday School that keeps
-                outgrowing its rooms.
+                Then came the church house itself, on the same field: a sanctuary
+                with a steeple, a covered drop-off for the folks who need it, and
+                classrooms for a Sunday School that kept outgrowing its rooms.
+                Come and see it — better yet, come and sit in it on a Sunday.
               </p>
             </div>
             <div className="mt-9 flex flex-wrap gap-4">
-              <Button href={SITE.giveUrl} external>
-                Give Toward the Building
-              </Button>
-              <Button href="/contact" variant="outline">
-                Ask About Helping
+              <Button href="/visit">Plan Your Visit</Button>
+              <Button href={SITE.giveUrl} external variant="outline">
+                Give Toward the Work
               </Button>
             </div>
           </Reveal>
 
           <Reveal delay={120}>
             <Figure
-              src="/img/new-church-building.jpg"
-              alt="Rendering of the planned church building — a gabled sanctuary faced in stone with a cross on the gable end, a white steeple, and a covered drive-through canopy"
+              src="/img/new-building-front.jpg"
+              alt="The finished church building — a gabled sanctuary faced in stone, with arched windows down the side and a white steeple"
               ratio="aspect-[16/9]"
-              caption="The rendering of our planned church building."
+              caption="The finished church building."
             />
             <div className="mt-6 grid grid-cols-2 gap-5">
               <Figure
@@ -154,14 +173,19 @@ export default function NewBuildingPage() {
         <div className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              src: "/img/new-church-building-2.jpg",
-              alt: "Rendering of the planned church building seen from the drive, with the existing workshop and Tabernacle beyond it",
-              caption: "The new building alongside what is already there.",
+              src: "/img/new-building-aerial.jpg",
+              alt: "The finished church building from the air — paved drive and parking, with the workshop and Tabernacle behind it",
+              caption: "The finished building, from the air.",
             },
             {
-              src: "/img/new-church-building-3.jpg",
-              alt: "Rendering of the planned church building's covered entrance, with stone facing and timber posts",
-              caption: "The covered entrance, close up.",
+              src: "/img/new-building-hall.jpg",
+              alt: "A finished room inside the new building, with round tables, chairs, arched windows and a small platform",
+              caption: "Inside: room to gather, and to teach.",
+            },
+            {
+              src: "/img/new-building-classroom.jpg",
+              alt: "A finished classroom in the new building with a round table, chairs, a whiteboard and an arched window",
+              caption: "Classrooms for a Sunday School that outgrew its rooms.",
             },
             ...GALLERY,
           ].map((g, i) => (

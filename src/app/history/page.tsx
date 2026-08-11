@@ -81,7 +81,7 @@ export default function HistoryPage() {
             <Heading
               eyebrow="Since 2017"
               title="Our new property at 610 Myers Lane"
-              lead="In 2017, God provided nineteen acres of beautiful wooded pasture land adjacent to Highway 55 in McMinnville. Since then we have prepared the site for the buildings that are planned — beginning with a workshop and a large pavilion."
+              lead="In 2017, God provided nineteen acres of beautiful wooded pasture land adjacent to Highway 55 in McMinnville. We have been building on it ever since — a workshop, a large pavilion, the pavilion enclosed as the Tabernacle, and now a finished church house."
             />
             <p className="mt-6 text-[16.5px] leading-relaxed text-body">
               We are excited to see what God will do in this place in the years

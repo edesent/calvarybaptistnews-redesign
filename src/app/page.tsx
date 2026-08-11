@@ -214,16 +214,16 @@ export default function HomePage() {
         <div className="grid gap-14 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-20">
           <Reveal>
             <Heading
-              eyebrow="Praying & Planning"
+              eyebrow="Nineteen years in the making"
               title="Our New Church Building"
-              lead="In 2017 God provided nineteen acres of wooded pasture land off Highway 55. We began with a workshop and a pavilion, enclosed the pavilion as the Tabernacle in 2021, and broke ground for the church building on the same field."
+              lead="In 2017 God provided nineteen acres of wooded pasture land off Highway 55. We began with a workshop and a pavilion, enclosed the pavilion as the Tabernacle in 2021, broke ground for a church house on the same field — and it now stands finished."
             />
             <ul className="mt-9 space-y-4">
               {[
                 ["2017", "Nineteen acres provided at 610 Myers Lane"],
                 ["2020", "Drive-in services, then open-air under the pavilion"],
                 ["2021", "The pavilion enclosed as the Tabernacle by December"],
-                ["Now", "Ground broken for the new church building"],
+                ["2026", "The new church building completed"],
               ].map(([year, text]) => (
                 <li key={year} className="flex gap-5">
                   <span className="w-14 shrink-0 pt-0.5 font-serif text-[15px] font-semibold text-wine">
@@ -245,23 +245,23 @@ export default function HomePage() {
 
           <Reveal delay={120} className="space-y-5">
             <Figure
-              src="/img/new-church-building.jpg"
-              alt="Rendering of the planned Calvary Baptist Church building — a gabled sanctuary faced in stone with a cross on the gable end and a white steeple"
+              src="/img/new-building-front.jpg"
+              alt="The finished Calvary Baptist Church building — a gabled sanctuary faced in stone, with arched windows and a white steeple, on the drive at 610 Myers Lane"
               ratio="aspect-[16/9]"
-              caption="The building we are praying and planning for."
+              caption="The finished building at 610 Myers Lane."
             />
             <div className="grid grid-cols-2 gap-5">
               <Figure
                 src="/img/groundbreaking.jpg"
                 alt="Members of Calvary Baptist Church standing with gold shovels at the groundbreaking for the new church building"
                 ratio="aspect-square"
-                caption="Breaking ground."
+                caption="Where it started: breaking ground."
               />
               <Figure
-                src="/img/pavilion-services.jpg"
-                alt="Open-air service under the pavilion, with rows of folding chairs and cars parked along the drive"
+                src="/img/new-building-aerial.jpg"
+                alt="The new church building from the air, with the paved drive, the workshop, and the Tabernacle behind it"
                 ratio="aspect-square"
-                caption="Open-air services under the pavilion."
+                caption="The property today, from the air."
               />
             </div>
           </Reveal>

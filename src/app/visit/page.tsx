@@ -79,9 +79,9 @@ export default function VisitPage() {
           <Reveal delay={120}>
             <Heading eyebrow="Where" title="610 Myers Lane" />
             <p className="mt-6 text-[16.5px] leading-relaxed text-body">
-              Nineteen acres just off Highway 55 in McMinnville. Look for the
-              long board-and-batten building with the metal roof — that is the
-              Tabernacle, and that is where we meet.
+              Nineteen acres just off Highway 55 in McMinnville. Look for our
+              sign at the road, then follow the drive in — there is plenty of
+              parking, and someone will point you to the right door.
             </p>
             <div className="mt-8 overflow-hidden rounded-sm border border-rule">
               <iframe
@@ -117,10 +117,10 @@ export default function VisitPage() {
         <div className="mt-12 grid gap-7 md:grid-cols-3">
           <Reveal>
             <Figure
-              src="/img/tabernacle.jpg"
-              alt="The exterior of the Tabernacle — board-and-batten walls, a standing-seam metal roof, and a covered porch with double doors"
+              src="/img/church-sign.jpg"
+              alt="The Calvary Baptist Church sign at the road: Sunday 10am, 11am and 6pm, Wednesday 7pm, 610 Myers Lane"
               ratio="aspect-[4/3]"
-              caption="Come in through the doors under the porch."
+              caption="Our sign at the road — turn in here."
             />
           </Reveal>
           <Reveal delay={70}>

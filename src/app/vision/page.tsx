@@ -46,11 +46,18 @@ const STAGES = [
     alt: "The finished Tabernacle, board-and-batten with a standing-seam roof and a covered porch",
   },
   {
-    label: "Coming soon",
+    label: "2022",
     title: "Breaking ground",
-    body: "Ground has been broken for our new church building on the same nineteen acres — the next step in what God is doing in this place.",
+    body: "Ground was broken for a church house on the same nineteen acres — the congregation standing in the field with gold shovels, heads bowed, on a fall morning.",
     photo: "/img/groundbreaking.jpg",
     alt: "Congregation members with gold shovels, heads bowed in prayer at the groundbreaking",
+  },
+  {
+    label: "2026",
+    title: "A church house on that field",
+    body: "The new building stands finished where we once held drive-in services: a sanctuary with a steeple, arched windows down both sides, classrooms, and a covered drop-off. Nine years from bare pasture to this.",
+    photo: "/img/new-building-front.jpg",
+    alt: "The finished Calvary Baptist Church building — stone gable end, arched windows, and a white steeple",
   },
 ];
 
@@ -60,7 +67,7 @@ export default function VisionPage() {
       <PageHero
         eyebrow="About Us"
         title="Our Vision for the Future"
-        lead="The work continues. What began as drive-in services in a field has become a building, a growing congregation, and ground broken for a church house."
+        lead="The work continues. What began as drive-in services in a bare field has become a Tabernacle, a finished church house, and a congregation half again the size it was."
       />
 
       <Section tone="paper">
@@ -112,23 +119,23 @@ export default function VisionPage() {
           <Reveal>
             <Heading
               eyebrow="What's next"
-              title="A church building on the field where we prayed"
+              title="The building is finished. The work is not."
               onDark
-              lead="We are praying and planning for a sanctuary with a steeple, a covered drop-off, and room for the families God keeps sending us. Come and see it while it is going up."
+              lead="God gave us the acres, then the pavilion, then the Tabernacle, then the church house. What He has not finished is the reason any of it went up — the families in Warren County who have not yet heard the gospel. Come and be part of that."
             />
             <div className="mt-9 flex flex-wrap gap-4">
-              <Button href="/new-building" variant="light">
-                See the Building Project
-              </Button>
-              <Button href="/visit" variant="ghost">
+              <Button href="/visit" variant="light">
                 Plan Your Visit
+              </Button>
+              <Button href="/new-building" variant="ghost">
+                See How It Was Built
               </Button>
             </div>
           </Reveal>
           <Reveal delay={120}>
             <Figure
-              src="/img/new-church-building.jpg"
-              alt="Rendering of the planned Calvary Baptist Church building — stone gable end with a cross, and a white steeple above the roofline"
+              src="/img/new-building-aerial.jpg"
+              alt="The finished church building from the air, with the paved drive, the workshop, and the Tabernacle behind it"
               ratio="aspect-[16/9]"
             />
           </Reveal>
