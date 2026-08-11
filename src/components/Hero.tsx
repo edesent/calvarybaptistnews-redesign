@@ -21,18 +21,20 @@ export default function Hero() {
         priority
         sizes="100vw"
         aria-hidden="true"
-        className="object-cover object-[center_40%]"
+        className="-z-10 object-cover object-[center_40%]"
       />
 
+      {/* Scrims paint over the photograph — they must NOT carry a negative
+          z-index, or they slide behind it and the type loses its background. */}
       {/* Flat wash for narrow screens, where the type spans the full width… */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-[1] bg-wine-dark/[0.88] lg:hidden"
+        className="absolute inset-0 bg-wine-dark/[0.88] lg:hidden"
       />
       {/* …and a left-weighted gradient on wide ones, so the room opens up. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-[1] hidden lg:block lg:bg-gradient-to-r lg:from-wine-dark lg:from-8% lg:via-wine-deep/90 lg:via-48% lg:to-wine/35"
+        className="absolute inset-0 hidden lg:block lg:bg-gradient-to-r lg:from-wine-dark lg:from-8% lg:via-wine-deep/90 lg:via-48% lg:to-wine/35"
       />
 
       <div className="relative mx-auto flex min-h-[560px] max-w-7xl flex-col justify-center px-5 py-20 lg:min-h-[680px] lg:px-8 lg:py-24">
