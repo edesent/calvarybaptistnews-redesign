@@ -205,7 +205,7 @@ export default function SchoolOfTheBiblePage() {
             },
             {
               title: "Basic Bible Doctrine II",
-              teacher: "Thomas Fittis",
+              teacher: "Tom Fittis",
               body: "Clear Bible teaching on anthropology (the study of man), hamartiology (sin), soteriology (salvation), ecclesiology (the church), and eschatology (end times). Bible answers are given to commonly asked questions concerning the Christian faith.",
             },
           ].map((c, i) => (
