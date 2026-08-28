@@ -56,11 +56,13 @@ export const BULLETINS: Bulletin[] = [
 
 /**
  * Sorted rather than trusted, so a bulletin added in the wrong place in the
- * list above still lands in the right spot on the page.
+ * list above still lands in the right spot on the page. An entry with no
+ * pages yet is skipped rather than rendered as a broken frame — a half-typed
+ * entry should never take the bulletin page down.
  */
-export const BULLETINS_NEWEST_FIRST: Bulletin[] = [...BULLETINS].sort((a, b) =>
-  b.date.localeCompare(a.date)
-);
+export const BULLETINS_NEWEST_FIRST: Bulletin[] = BULLETINS.filter(
+  (b) => b.pages.length > 0
+).sort((a, b) => b.date.localeCompare(a.date));
 
 /** This week's — the one shown large on /bulletin and on the home page. */
 export const LATEST_BULLETIN: Bulletin | null =
