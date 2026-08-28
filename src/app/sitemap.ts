@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/config/site";
+import { BULLETINS } from "@/content/bulletins";
 
 /** Every route on the site, with the pages we update most weighted highest. */
 const ROUTES: [path: string, priority: number, freq: "weekly" | "monthly" | "yearly"][] =
