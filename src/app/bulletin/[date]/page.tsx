@@ -22,7 +22,7 @@ type Params = { params: Promise<{ date: string }> };
  * page rendered on demand, so a mistyped address can't invent a bulletin.
  */
 export function generateStaticParams() {
-  return BULLETINS.map((b) => ({ date: b.date }));
+  return BULLETINS_NEWEST_FIRST.map((b) => ({ date: b.date }));
 }
 
 export const dynamicParams = false;
