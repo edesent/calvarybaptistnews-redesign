@@ -20,7 +20,7 @@ const PASTORS = [
     ],
   },
   {
-    name: "Pastor Thomas Fittis",
+    name: "Pastor Tom Fittis",
     years: "2012 – present",
     body: [
       "In 2012, the congregation called Pastor Thomas Fittis to be its new pastor. Bro. Tom had been saved in Northern Ireland as a young man and came to Tennessee to study the Bible at Tennessee Temple University in Chattanooga.",
