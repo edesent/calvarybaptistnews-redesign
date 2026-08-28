@@ -15,7 +15,7 @@ export const SITE = {
   description:
     "Calvary Baptist Church is a friendly, traditional, Independent Baptist church in McMinnville, Tennessee. Sunday School at 10:00, worship at 11:00, and Bible preaching from the King James Bible.",
   founded: 1972,
-  pastor: "Tom Fittis",
+  pastor: "Thomas Fittis",
   pastorInformal: "Bro. Tom",
 
   address: {
