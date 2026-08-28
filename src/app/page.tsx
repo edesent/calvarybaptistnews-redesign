@@ -144,6 +144,56 @@ export default function HomePage() {
         </Reveal>
       </Section>
 
+      {/* ── This week's bulletin ────────────────────────────────────────
+          Rendered only when a bulletin has actually been posted, so the home
+          page never shows an empty frame. */}
+      {LATEST_BULLETIN && (
+        <Section tone="paper">
+          <div className="grid items-center gap-14 lg:grid-cols-[1fr_360px] lg:gap-20">
+            <Reveal>
+              <Heading
+                eyebrow="This Week at Calvary"
+                title="The Weekly Bulletin"
+                lead="The same bulletin handed out at the door on Sunday — the pastor's letter, the week's announcements, the prayer list, and who is serving where. A new one is posted every week, and every past week is kept in the library."
+              />
+              <p className="mt-6 text-[15.5px] text-body">
+                Now showing the bulletin for{" "}
+                <span className="font-medium text-wine">
+                  {formatBulletinDate(LATEST_BULLETIN.date)}
+                </span>
+                .
+              </p>
+              <div className="mt-9 flex flex-wrap gap-4">
+                <Button href="/bulletin">Read This Week&rsquo;s Bulletin</Button>
+                <Button href="/bulletin#library" variant="outline">
+                  Bulletin Library
+                </Button>
+              </div>
+            </Reveal>
+
+            <Reveal
+              delay={120}
+              className="mx-auto w-full max-w-[300px] lg:max-w-none"
+            >
+              <Link
+                href="/bulletin"
+                className="group block overflow-hidden rounded-sm border border-rule bg-white shadow-[0_14px_40px_-20px_rgba(23,19,26,0.35)]"
+              >
+                <div className="relative aspect-[17/22]">
+                  <Image
+                    src={LATEST_BULLETIN.pages[0]}
+                    alt={`Front page of the ${SITE.name} bulletin for ${formatBulletinDate(LATEST_BULLETIN.date)}`}
+                    fill
+                    sizes="(min-width: 1024px) 360px, 300px"
+                    className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+              </Link>
+            </Reveal>
+          </div>
+        </Section>
+      )}
+
       {/* ── The sanctuary ───────────────────────────────────────────────── */}
       <Section tone="ivory">
         <Reveal>
