@@ -7,7 +7,7 @@ import { LEADERS, SITE } from "@/config/site";
 export const metadata: Metadata = {
   title: "Pastor & Leaders",
   description:
-    "Meet Pastor Thomas Fittis and the leadership team of Calvary Baptist Church in McMinnville, Tennessee.",
+    "Meet Pastor Tom Fittis and the leadership team of Calvary Baptist Church in McMinnville, Tennessee.",
   alternates: { canonical: "/leadership" },
 };
 
