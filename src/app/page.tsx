@@ -77,7 +77,7 @@ export default function HomePage() {
                 Tom's portrait is framed rather than cropped. */}
             <OvalPhoto
               src="/img/pastor-tom.png"
-              alt="Pastor Tom Fittis"
+              alt="Pastor Thomas Fittis"
               className="aspect-[257/390]"
             />
             <div className="mt-8 text-center">
