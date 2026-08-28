@@ -13,7 +13,7 @@ export const SITE = {
   tagline: "We Preach Christ Crucified, Risen, and Coming Again",
   url: "https://www.calvarybaptistnews.com",
   description:
-    "Calvary Baptist Church is a friendly, traditional, Independent Baptist church in McMinnville, Tennessee. Sunday School at 10:00, worship at 11:00, and Bible preaching from the King James Bible.",
+    "Calvary Baptist Church is a friendly, traditional, Independent Baptist church in McMinnville, Tennessee. Sunday School at 10:00, worship at 12 noon, and Bible preaching from the King James Bible.",
   founded: 1972,
   pastor: "Thomas Fittis",
   pastorInformal: "Bro. Tom",
