@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 import { Button, PageHero, Section } from "@/components/ui";
 import { SITE } from "@/config/site";
 import {
-  BULLETINS,
+  BULLETINS_NEWEST_FIRST,
   bulletinByDate,
   bulletinNeighbours,
   formatBulletinDate,
