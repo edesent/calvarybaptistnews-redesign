@@ -20,10 +20,10 @@ const PASTORS = [
     ],
   },
   {
-    name: "Pastor Tom Fittis",
+    name: "Pastor Thomas Fittis",
     years: "2012 – present",
     body: [
-      "In 2012, the congregation called Pastor Tom Fittis to be its new pastor. Bro. Tom had been saved in Northern Ireland as a young man and came to Tennessee to study the Bible at Tennessee Temple University in Chattanooga.",
+      "In 2012, the congregation called Pastor Thomas Fittis to be its new pastor. Bro. Tom had been saved in Northern Ireland as a young man and came to Tennessee to study the Bible at Tennessee Temple University in Chattanooga.",
       "After his Bible training he, with his wife Leslie, returned to Northern Ireland as missionaries for the next nineteen years. After returning to the United States in 2005, Tom ministered at B.I.M.I. as director of enrichment, and also was pastor at Temple Baptist Church in McMinnville for six years.",
       "Both pastor and church are excited about what the future holds for Calvary as they embark on a new building program on the nineteen-acre property on Highway 55.",
     ],
