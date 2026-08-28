@@ -1,7 +1,7 @@
 # Calvary Baptist Church — McMinnville, Tennessee
 
 A redesign of [calvarybaptistnews.com](https://calvarybaptistnews.com) for Calvary
-Baptist Church, 610 Myers Lane, McMinnville, TN 37110. Pastor Tom Fittis.
+Baptist Church, 610 Myers Lane, McMinnville, TN 37110. Pastor Thomas Fittis.
 
 Built and maintained by Pastor Eli — **[elijahdesent.com](https://www.elijahdesent.com)**.
 
