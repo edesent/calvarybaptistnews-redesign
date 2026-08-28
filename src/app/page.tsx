@@ -19,6 +19,7 @@ import {
   SITE,
   TESTIMONIES,
 } from "@/config/site";
+import { formatBulletinDate, LATEST_BULLETIN } from "@/content/bulletins";
 
 const MISSIONARY_COUNT = MISSION_TEAMS.reduce(
   (n, t) => n + t.missionaries.length,
