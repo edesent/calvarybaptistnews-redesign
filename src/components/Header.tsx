@@ -43,7 +43,7 @@ export default function Header() {
       <div className="bg-wine text-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-1 px-5 py-2 text-center text-[12.5px] sm:flex-row sm:text-[13px]">
           <p className="font-medium tracking-wide">
-            Sunday School 10:00 · Morning Worship 11:00 · Evening 6:00
+            Sunday School 10:00 · Morning Worship 12:00 noon · Evening 6:00
           </p>
           <p className="text-wine-pale">
             <span className="hidden sm:inline">{SITE.address.full} · </span>
