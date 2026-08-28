@@ -72,7 +72,7 @@ export const LATEST_BULLETIN: Bulletin | null =
 export const PAST_BULLETINS: Bulletin[] = BULLETINS_NEWEST_FIRST.slice(1);
 
 export function bulletinByDate(date: string): Bulletin | undefined {
-  return BULLETINS.find((b) => b.date === date);
+  return BULLETINS_NEWEST_FIRST.find((b) => b.date === date);
 }
 
 /** The week before and after, for paging through the library. */
