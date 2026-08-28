@@ -126,12 +126,12 @@ export const NURSERY_NOTE =
 /** Leadership, in the order the church lists them. */
 export const LEADERS = [
   {
-    name: "Tom & Leslie Fittis",
+    name: "Thomas & Leslie Fittis",
     role: "Pastor · Children's Ministries",
     photo: "/img/staff-fittis.png",
     bio: [
-      "Tom is from Belfast, Northern Ireland. He is married to Leslie, who is from Memphis, Tennessee, and they have three children. At the age of eighteen, Tom was saved at Victory Baptist Church in Belfast — a church founded through the missionary efforts of Freeman Goodge and Ed Bissett.",
-      "Four months after he became a Christian, Tom enrolled at Tennessee Temple University in Chattanooga for his ministerial training. Tom and Leslie were married in 1983 and then served the Lord in Northern Ireland for nineteen years before returning to the United States in 2005. Since then the couple have served as Director of Enrichment at Baptist International Missions, Inc., and as pastor of Temple Baptist Church and Calvary Baptist Church in McMinnville, Tennessee.",
+      "Thomas is from Belfast, Northern Ireland. He is married to Leslie, who is from Memphis, Tennessee, and they have three children. At the age of eighteen, Thomas was saved at Victory Baptist Church in Belfast — a church founded through the missionary efforts of Freeman Goodge and Ed Bissett.",
+      "Four months after he became a Christian, Thomas enrolled at Tennessee Temple University in Chattanooga for his ministerial training. Thomas and Leslie were married in 1983 and then served the Lord in Northern Ireland for nineteen years before returning to the United States in 2005. Since then the couple have served as Director of Enrichment at Baptist International Missions, Inc., and as pastor of Temple Baptist Church and Calvary Baptist Church in McMinnville, Tennessee.",
       "Pastor Fittis enjoys expository preaching and teaching of the Scriptures in each service. Christ is lifted up as the Word of God is proclaimed, and people are encouraged to believe upon Christ and grow in the Lord. Ms. Leslie helps with the children's ministries at Calvary.",
     ],
   },
