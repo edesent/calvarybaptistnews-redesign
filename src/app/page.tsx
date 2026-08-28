@@ -82,7 +82,7 @@ export default function HomePage() {
             />
             <div className="mt-8 text-center">
               <p className="font-serif text-[21px] text-ink">
-                Pastor Thomas Fittis
+                Pastor Tom Fittis
               </p>
               <p className="mt-1 text-[13px] font-semibold uppercase tracking-[0.15em] text-wine">
                 Pastor since 2012
