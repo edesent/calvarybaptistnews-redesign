@@ -104,7 +104,7 @@ export default function Hero() {
           >
             {[
               { k: "Sunday School", v: "10:00 am" },
-              { k: "Morning Worship", v: "11:00 am" },
+              { k: "Morning Worship", v: "12:00 noon" },
               { k: "Sunday Evening", v: "6:00 pm" },
               { k: "Wednesday", v: "6:45 pm" },
             ].map((s) => (
