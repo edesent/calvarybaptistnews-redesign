@@ -46,7 +46,7 @@ const SEMESTERS = [
 ];
 
 const TEACHERS = [
-  ["Thomas Fittis", "Basic Bible Doctrine"],
+  ["Tom Fittis", "Basic Bible Doctrine"],
   ["Billy Kirk", "Methods of Bible Study"],
   ["Robert Ditmore", "Survey of the Old Testament"],
   ["Jeremy Jones", "Assistant teacher"],
