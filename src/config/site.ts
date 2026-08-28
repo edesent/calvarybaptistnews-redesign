@@ -403,6 +403,7 @@ export const NAV: {
       { label: "Radio Broadcasts", href: "/radio" },
       { label: "Free Resources", href: "/resources" },
       { label: "Weekly Bulletin", href: "/bulletin" },
+      { label: "Bulletin Library", href: "/bulletin#library" },
     ],
   },
   { label: "Visit", href: "/visit" },
