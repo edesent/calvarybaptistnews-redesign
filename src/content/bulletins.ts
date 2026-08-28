@@ -47,8 +47,18 @@ export type Bulletin = {
 /** Newest at the top. Add this week's bulletin directly above the others. */
 export const BULLETINS: Bulletin[] = [
   {
-    date: "2026-08-23",
-    pages: ["/img/bulletin-1.jpg", "/img/bulletin-2.jpg"],
+    date: "2026-08-30",
+    pages: [
+      "/img/bulletins/2026-08-30-1.jpg",
+      "/img/bulletins/2026-08-30-2.jpg",
+    ],
+  },
+  {
+    date: "2026-08-09",
+    pages: [
+      "/img/bulletins/2026-08-09-1.jpg",
+      "/img/bulletins/2026-08-09-2.jpg",
+    ],
   },
 ];
 
