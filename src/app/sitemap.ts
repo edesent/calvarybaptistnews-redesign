@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
    * Each week's bulletin keeps a permanent page in the library. Once posted
    * it never changes again, so it is listed as yearly.
    */
-  const bulletins = BULLETINS.map((b) => ({
+  const bulletins = BULLETINS_NEWEST_FIRST.map((b) => ({
     url: `${SITE.url}/bulletin/${b.date}`,
     lastModified,
     changeFrequency: "yearly" as const,
