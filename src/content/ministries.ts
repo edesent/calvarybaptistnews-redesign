@@ -53,7 +53,7 @@ export const MINISTRY_DETAILS: MinistryDetail[] = [
       },
     ],
     body: [
-      "Children's Church meets every Sunday morning at 11:00, at the same hour as the preaching service, so parents can hear the message while their children get one of their own.",
+      "Children's Church meets every Sunday morning at 11:00, with singing, Bible stories, memory verses, games, and snacks for children ages 4 through 11. Morning worship begins at 12 noon.",
       "On Wednesday evenings, Robert and Connie Ditmore lead our JAM Club — Jesus And Me — for school-aged children, and Master Clubs meets for ages four through sixth grade. Both are a mix of Bible teaching, memory work, and a good deal of fun.",
       "Through the year there is a Children's Christmas Play and a JAM Club Christmas party. A staffed nursery is available for ages three and under at every service, coordinated by Hanna Jones.",
     ],
