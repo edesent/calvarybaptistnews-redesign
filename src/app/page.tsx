@@ -493,7 +493,7 @@ export default function HomePage() {
           <Heading
             eyebrow="Free to Read"
             title="Resources to encourage your faith"
-            lead="Two Bible studies we use at Calvary, plus our quarterly newsletter — free, with nothing to sign up for."
+            lead="Bible studies and our quarterly newsletter to encourage your faith."
           />
         </Reveal>
 
