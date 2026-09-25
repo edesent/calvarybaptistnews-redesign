@@ -21,7 +21,7 @@ const QUESTIONS = [
   },
   {
     q: "Where do my children go?",
-    a: "Sunday School has a class for every age at 10:00. During the 11:00 service, Children's Church meets at the same hour, and a nursery is staffed for ages three and under.",
+    a: "Sunday School has a class for every age at 10:00. Children's Church meets at 11:00 and morning worship begins at 12 noon. A nursery is staffed for ages three and under.",
   },
   {
     q: "Will I be singled out?",
