@@ -93,7 +93,7 @@ export default function RadioPage() {
             </h2>
             <p className="mt-5 text-[16.5px] leading-relaxed text-body">
               We would be glad to meet you. Sunday School at 10:00, morning
-              worship at 11:00, at {SITE.address.full}.
+              worship at 12 noon, at {SITE.address.full}.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
               <Button href="/visit">Plan Your Visit</Button>
