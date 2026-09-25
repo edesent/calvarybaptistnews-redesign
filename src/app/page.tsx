@@ -511,9 +511,9 @@ export default function HomePage() {
               title: "Discipleship 101",
               blurb:
                 "The role of the church in Christian discipleship, and how a loving local church is God's primary tool for growth.",
-              href: SITE.discipleshipPdf,
-              cta: "Read the study",
-              external: true,
+              href: "/contact",
+              cta: "Request the study",
+              external: false,
             },
             {
               title: "The Calvary Newsletter",
