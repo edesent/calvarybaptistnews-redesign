@@ -6,7 +6,7 @@ import { SITE } from "@/config/site";
 export const metadata: Metadata = {
   title: "Free Resources",
   description:
-    "Free Bible studies from Calvary Baptist Church, McMinnville — Anchors of Faith, Discipleship 101, a study on the person of Christ, and The Calvary Newsletter.",
+    "Bible studies and church news from Calvary Baptist Church, McMinnville — Anchors of Faith, a study on the person of Christ, and The Calvary Newsletter.",
   alternates: { canonical: "/resources" },
 };
 
