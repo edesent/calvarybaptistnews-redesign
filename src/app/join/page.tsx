@@ -136,8 +136,8 @@ export default function JoinPage() {
                 lead="Five steps, at your pace. Nothing happens that you have not been told about first."
               />
               <div className="mt-9">
-                <Button href={SITE.discipleshipPdf} external variant="outline">
-                  Read Discipleship 101
+                <Button href="/contact" variant="outline">
+                  Ask About Discipleship 101
                 </Button>
               </div>
             </div>
