@@ -21,16 +21,6 @@ const RESOURCES = [
     href: SITE.anchorsPdf,
     cta: "Read Anchors of Faith",
   },
-  {
-    kicker: "The role of the church in Christian discipleship",
-    title: "Discipleship 101",
-    body: [
-      "Salvation is free — it is the gift of God. But being a disciple, a follower of Christ, will cost you. God motivates our commitment by His love in salvation, so that we want to follow Him, we desire to serve Him.",
-      "Discipleship 101 will help any believer see the importance of continuing as a learner, a follower, a disciple of Jesus. God has given many tools to help us on that journey, and the Bible teaches that the primary tool is a loving community known as the church. It was Jesus who invented the church, and in this study you will see from the Bible how the church is designed to help you grow as a disciple of Christ.",
-    ],
-    href: SITE.discipleshipPdf,
-    cta: "Read Discipleship 101",
-  },
 ];
 
 export default function ResourcesPage() {
