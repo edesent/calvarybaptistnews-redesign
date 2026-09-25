@@ -124,7 +124,7 @@ export default function HistoryPage() {
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-serif text-[clamp(1.7rem,3.6vw,2.4rem)] leading-tight text-white">
-              Fifty years on, the work continues
+              Since 1972, the work continues
             </h2>
             <p className="mt-5 text-[16.5px] leading-relaxed text-wine-pale/85">
               Come and be part of what God is doing at Calvary. Sunday School at
