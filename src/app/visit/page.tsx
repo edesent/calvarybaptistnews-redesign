@@ -33,7 +33,7 @@ const QUESTIONS = [
   },
   {
     q: "How long is the service?",
-    a: "Morning worship runs a little over an hour. Sunday School is the hour before it, and there is coffee and conversation in between.",
+    a: "Morning worship runs a little over an hour. Sunday School begins at 10:00, with time for coffee and conversation before worship at noon.",
   },
 ];
 
