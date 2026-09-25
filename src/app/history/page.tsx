@@ -6,7 +6,7 @@ import { SITE } from "@/config/site";
 export const metadata: Metadata = {
   title: "Our History",
   description:
-    "Calvary Baptist Church was organized by Pastor John Clontz in 1972. Fifty years of history in McMinnville, Tennessee — two pastors, and nineteen acres on Highway 55.",
+    "Calvary Baptist Church was organized by Pastor John Clontz in 1972. A church founded in 1972 in McMinnville, Tennessee — two pastors, and nineteen acres on Highway 55.",
   alternates: { canonical: "/history" },
 };
 
