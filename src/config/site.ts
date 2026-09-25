@@ -62,7 +62,7 @@ export const SERVICES = [
     day: "Sunday",
     name: "Morning Worship",
     time: "12:00 noon",
-    note: "Children's Church meets at the same hour",
+    note: "Children's Church meets at 11:00 am",
   },
   {
     day: "Sunday",
