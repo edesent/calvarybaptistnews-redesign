@@ -128,7 +128,7 @@ export default function HistoryPage() {
             </h2>
             <p className="mt-5 text-[16.5px] leading-relaxed text-wine-pale/85">
               Come and be part of what God is doing at Calvary. Sunday School at
-              10:00, morning worship at 11:00, at {SITE.address.street}.
+              10:00, morning worship at 12 noon, at {SITE.address.street}.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
               <Button href="/visit" variant="light">
