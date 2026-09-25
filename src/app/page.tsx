@@ -477,7 +477,7 @@ export default function HomePage() {
                 We would love to meet you this Sunday.
               </p>
               <p className="mt-3 text-[14.5px] leading-relaxed text-body">
-                Sunday School at 10:00, worship at 11:00.
+                Sunday School at 10:00, Children's Church at 11:00, worship at 12 noon.
               </p>
               <div className="mt-6">
                 <Button href="/visit">Plan Your Visit</Button>
