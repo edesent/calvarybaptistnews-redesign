@@ -48,8 +48,6 @@ export const SITE = {
    */
   youtubeUploadsPlaylist: "UUI_B3V_W-tHU2p7LJgCcTXQ",
   anchorsPdf: "https://www.wholesomewords.org/pdf/anchors.pdf",
-  discipleshipPdf:
-    "https://irp.cdn-website.com/f4ca3a22/files/uploaded/Discipleship_101_Master._Revised_July_2025.pdf",
 } as const;
 
 /** Weekly schedule. `note` renders as small print under the time. */
