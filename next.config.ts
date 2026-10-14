@@ -43,6 +43,10 @@ const nextConfig: NextConfig = {
       permanent: true,
     }));
   },
+  // /edit is the home page with the pastor's editor on; keep it out of search.
+  async headers() {
+    return [{ source: "/edit", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] }];
+  },
 };
 
 export default nextConfig;

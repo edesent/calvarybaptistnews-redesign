@@ -28,6 +28,40 @@ custom connector), paste the endpoint above and sign in.
 
 ---
 
+## Or edit right on the page: `/edit`
+
+The pastor can also change wording and post bulletins himself at
+**<https://calvarymcminnville.elijahdesent.com/edit>**: no ChatGPT, nothing to install.
+
+- **Sign in.** He enters his email and gets a sign-in link (Resend, 20 minutes, sent as
+  "Eli Desent"). Only addresses in `EDIT_EMAILS` get one. The session is a signed HttpOnly
+  cookie scoped to `/api/edit`, good for 30 days, so no database is involved.
+- **Text.** Any text inside `<main>` that can be traced to exactly one place in the source is
+  outlined in gold on hover. He clicks it and rewrites it in a box that says where it's saved
+  ("Church details — used on several pages"), then presses Publish. Nothing in the site is
+  restructured for this. `src/edit/textmatch.ts` matches the words against the source
+  (whole JSX text or a whole string literal). It handles entities and line wrapping, and only
+  considers files the page actually imports. When the same words appear twice, the
+  neighbouring text on the page decides, and if that's still unclear the text isn't offered.
+  `/api/edit/text` re-matches against the latest `main` (so ChatGPT edits are never
+  overwritten) and commits. After the deploy, the editor checks the page shows the new words.
+- **Bulletins.** "Post a bulletin" takes photos or a PDF (rendered to pages in the browser
+  with pdf.js), shrinks each page to a JPEG and uploads it, then commits
+  `public/img/bulletins/YYYY-MM-DD-N.jpg` and an entry in `src/content/bulletins.json` in
+  one commit. Posting over an existing Sunday asks first. The old images are removed and the
+  new ones get a fresh filename so nobody sees a cached page.
+- Publishing warns that the live site takes about 2 minutes, then counts down. **Exit** clears
+  the editor from the browser and reloads the page fresh.
+
+| Env (Production) | |
+| --- | --- |
+| `EDIT_EMAILS` | who can sign in, comma separated |
+| `EDIT_SECRET` | signs links and sessions (32+ chars). Rotating it signs everyone out |
+| `EDIT_GITHUB_TOKEN` | contents:write on this repo |
+| `EDIT_RESEND_API_KEY` | sends the sign-in email (`EDIT_FROM_EMAIL` optional). Not `RESEND_API_KEY`: the contact form reads that one |
+
+---
+
 ## The one file that matters
 
 **`src/config/site.ts`** holds nearly all the church's content: address, phone,
@@ -43,6 +77,7 @@ Longer documents live beside it:
 | `src/config/site.ts` | Church facts, times, staff, missionaries, ministries, nav |
 | `src/content/articles-of-faith.ts` | The 29 Articles of Faith, verbatim |
 | `src/content/ministries.ts` | Detail copy for each `/ministries/<name>` page |
+| `src/content/bulletins.json` | Every posted bulletin (the editor adds to it) |
 
 ## Design
 

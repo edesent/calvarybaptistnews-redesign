@@ -1,39 +1,34 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════
- *  THE WEEKLY BULLETIN — this is the only file that changes each week.
+ *  THE WEEKLY BULLETIN
  * ═══════════════════════════════════════════════════════════════════════════
  *
- *  TO POST A NEW BULLETIN (assistant: follow these four steps exactly)
+ *  The pastor posts bulletins himself: /edit → "Post a bulletin". He picks
+ *  the Sunday, adds photos or a PDF of the pages, and the editor commits the
+ *  page images and a new entry in bulletins.json in one go.
  *
- *  1. Ask the pastor for a photo or scan of EACH page of the bulletin, in
- *     order, front page first. Two pages is the usual, but any number works.
+ *  TO POST ONE BY HAND (assistant: follow these steps exactly)
  *
- *  2. Upload each page with `upload_photo`, using this exact naming pattern
- *     so the files never collide and a new week never serves last week's
- *     cached picture:
+ *  1. Get a photo or scan of EACH page of the bulletin, front page first.
+ *
+ *  2. Upload each page with `upload_photo` as
  *
  *         public/img/bulletins/YYYY-MM-DD-1.jpg
  *         public/img/bulletins/YYYY-MM-DD-2.jpg     (and -3, -4 … if needed)
  *
- *     YYYY-MM-DD is the SUNDAY the bulletin is for — e.g. 2026-09-06.
- *     Keep whatever extension the pastor's file actually has (.jpg, .jpeg,
- *     .png, .webp). When the uploads are done, run `list_photos` on
- *     'public/img/bulletins' and copy the exact filenames it reports. A
- *     mistyped filename is the number one cause of a blank bulletin.
+ *     YYYY-MM-DD is the SUNDAY the bulletin is for. Run `list_photos` on
+ *     'public/img/bulletins' and copy the exact filenames it reports.
  *
- *  3. Add ONE new entry to the TOP of the BULLETINS list below, following the
- *     shape of the entry already there. Newest first: whatever sits at the
- *     top is what the site calls "this week's bulletin" and what shows on the
- *     home page.
- *
- *  4. Done. Nothing else needs touching — the home page, the bulletin page,
- *     the library, the individual week pages, and the sitemap all read from
- *     this list.
+ *  3. Add ONE entry to the TOP of src/content/bulletins.json, shaped like the
+ *     ones already there: { "date": "YYYY-MM-DD", "pages": ["/img/bulletins/…"] }
+ *     plus an optional "note" (e.g. "Homecoming Sunday").
  *
  *  Never delete an old entry. Every past bulletin stays in the library and
  *  keeps its own permanent page at /bulletin/YYYY-MM-DD.
  * ═══════════════════════════════════════════════════════════════════════════
  */
+
+import list from "./bulletins.json";
 
 export type Bulletin = {
   /** The Sunday this bulletin was handed out, written as YYYY-MM-DD. */
@@ -44,23 +39,8 @@ export type Bulletin = {
   note?: string;
 };
 
-/** Newest at the top. Add this week's bulletin directly above the others. */
-export const BULLETINS: Bulletin[] = [
-  {
-    date: "2026-08-30",
-    pages: [
-      "/img/bulletins/2026-08-30-1.jpg",
-      "/img/bulletins/2026-08-30-2.jpg",
-    ],
-  },
-  {
-    date: "2026-08-09",
-    pages: [
-      "/img/bulletins/2026-08-09-1.jpg",
-      "/img/bulletins/2026-08-09-2.jpg",
-    ],
-  },
-];
+/** Newest at the top — kept in bulletins.json so the editor can add to it. */
+export const BULLETINS: Bulletin[] = list;
 
 /* ── Everything below is machinery. There is no need to edit it. ─────────── */
 
