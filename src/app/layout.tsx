@@ -162,6 +162,8 @@ export default function RootLayout({
         <Footer />
         <StructuredData />
         <EditGate />
+        {/* Demo tracking (CRM → Demo Tracking). Remove at go-live. */}
+        <script async src="https://www.elijahdesent.com/demo.js" />
       </body>
     </html>
   );
